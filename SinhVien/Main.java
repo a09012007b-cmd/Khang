@@ -4,7 +4,6 @@ public class Main {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    // Đọc một số nguyên, nhập sai thì yêu cầu nhập lại
     private static int docSoNguyen(String thongBao) {
         while (true) {
             System.out.print(thongBao);
@@ -16,7 +15,6 @@ public class Main {
         }
     }
 
-    // Đọc một số thực, nhập sai thì yêu cầu nhập lại
     private static double docSoThuc(String thongBao) {
         while (true) {
             System.out.print(thongBao);
@@ -39,7 +37,6 @@ public class Main {
 
         SinhVien[] ds = new SinhVien[n];
 
-        // Nhập danh sách sinh viên
         for (int i = 0; i < n; i++) {
             System.out.println("\n--- Nhập sinh viên thứ " + (i + 1) + " ---");
             int maSV = docSoNguyen("Mã sinh viên: ");
@@ -51,7 +48,6 @@ public class Main {
             ds[i] = new SinhVien(maSV, hoTen, diemLT, diemTH);
         }
 
-        // In danh sách
         System.out.println("\n================ DANH SÁCH SINH VIÊN ================");
         System.out.println(String.format("%-10s %-20s %-10s %-10s %-10s",
                 "Mã SV", "Họ tên", "Điểm LT", "Điểm TH", "Điểm TB"));
@@ -59,7 +55,6 @@ public class Main {
             System.out.println(sv);
         }
 
-        // Tìm sinh viên có điểm trung bình cao nhất
         SinhVien max = ds[0];
         for (SinhVien sv : ds) {
             if (sv.tinhDiemTrungBinh() > max.tinhDiemTrungBinh()) {
