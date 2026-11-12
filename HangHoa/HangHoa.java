@@ -1,6 +1,5 @@
-// Lớp trừu tượng: chứa các thuộc tính chung của mọi loại hàng hóa
 public abstract class HangHoa {
-    private final String maHang;   // final: không được sửa sau khi tạo
+    private final String maHang;  
     private String tenHang;
     private int soLuongTon;
     private double donGia;
@@ -52,10 +51,8 @@ public abstract class HangHoa {
         this.donGia = donGia;
     }
 
-    // Tiền VAT trên một đơn vị hàng: mỗi loại hàng có thuế suất riêng
     public abstract double tinhVAT();
 
-    // Đánh giá mức độ bán buôn: mỗi loại hàng có tiêu chí riêng
     public abstract String danhGiaMucDoBanBuon();
 
     @Override
