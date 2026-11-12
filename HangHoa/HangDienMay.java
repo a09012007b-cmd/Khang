@@ -1,7 +1,7 @@
-// Hàng điện máy: VAT 10%
+
 public class HangDienMay extends HangHoa {
-    private int thoiGianBaoHanh;  // số tháng, >= 0
-    private double congSuat;      // KW, > 0
+    private int thoiGianBaoHanh;  
+    private double congSuat;      
 
     public HangDienMay(String maHang, String tenHang, int soLuongTon, double donGia,
                        int thoiGianBaoHanh, double congSuat) {
@@ -37,7 +37,7 @@ public class HangDienMay extends HangHoa {
         return getDonGia() * 0.1;
     }
 
-    // Tồn kho < 3 thì được đánh giá là bán được
+
     @Override
     public String danhGiaMucDoBanBuon() {
         if (getSoLuongTon() < 3) {
