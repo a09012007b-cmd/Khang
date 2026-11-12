@@ -3,7 +3,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-// Lớp tiện ích đọc dữ liệu từ bàn phím, nhập sai thì yêu cầu nhập lại
 public class NhapLieu {
     private static final Scanner sc = new Scanner(System.in);
     private static final DateTimeFormatter FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -30,7 +29,6 @@ public class NhapLieu {
         }
     }
 
-    // Số nguyên >= 0
     public static int docSoNguyenKhongAm(String thongBao) {
         while (true) {
             int v = docSoNguyen(thongBao);
@@ -41,7 +39,6 @@ public class NhapLieu {
         }
     }
 
-    // Số thực > 0
     public static double docSoThucDuong(String thongBao) {
         while (true) {
             System.out.print(thongBao);
@@ -68,7 +65,6 @@ public class NhapLieu {
         }
     }
 
-    // Ngày hết hạn phải sau hoặc bằng ngày sản xuất
     public static LocalDate docNgayHetHan(String thongBao, LocalDate ngaySanXuat) {
         while (true) {
             LocalDate d = docNgay(thongBao);
