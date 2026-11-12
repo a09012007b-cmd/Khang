@@ -1,4 +1,3 @@
-
 public class HangDienMay extends HangHoa {
     private int thoiGianBaoHanh;  
     private double congSuat;      
