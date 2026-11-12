@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Lớp cha chứa các thuộc tính chung của khách hàng
 public class KhachHang {
     protected int MaKH, SoLuong;
     protected double DonGia, ThanhTien;
