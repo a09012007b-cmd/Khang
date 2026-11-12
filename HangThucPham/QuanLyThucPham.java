@@ -12,7 +12,7 @@ public class HangThucPham implements Comparable<HangThucPham> {
 
     private static int demSoLuong = 0;
 
-    // Constructor mac dinh
+    // Constructor
     public HangThucPham() {
         this.id = ++demSoLuong;
         this.maHang = "MAC_DINH";
@@ -22,7 +22,7 @@ public class HangThucPham implements Comparable<HangThucPham> {
         this.gia = 1.0f;
     }
 
-    // Constructor co tham so
+    // Constructor
     public HangThucPham(String maHang, String tenHang,
                         LocalDate ngaySanXuat, LocalDate ngayHetHan, float gia) {
         this.id = ++demSoLuong;
@@ -62,7 +62,6 @@ public class HangThucPham implements Comparable<HangThucPham> {
     public float getGia() { return gia; }
 
     // Setter
-    // Khong co setMaHang() vi maHang la final.
     public void setTenHang(String tenHang) {
         if (tenHang == null || tenHang.trim().isEmpty())
             throw new IllegalArgumentException("Ten hang khong duoc de trong!");
