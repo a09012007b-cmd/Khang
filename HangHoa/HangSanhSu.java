@@ -2,7 +2,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-// Hàng sành sứ: VAT 10%
 public class HangSanhSu extends HangHoa {
     private String nhaSanXuat;
     private LocalDate ngayNhapKho;
@@ -34,7 +33,6 @@ public class HangSanhSu extends HangHoa {
         return getDonGia() * 0.1;
     }
 
-    // Tồn kho > 50 và lưu kho > 10 ngày thì bán chậm
     @Override
     public String danhGiaMucDoBanBuon() {
         long soNgayLuuKho = ChronoUnit.DAYS.between(ngayNhapKho, LocalDate.now());
