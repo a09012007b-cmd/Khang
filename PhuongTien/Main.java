@@ -39,7 +39,6 @@ public class VehicleMain {
 
         Vehicle[] ds = new Vehicle[n];
 
-        // Nhập thông tin từng xe
         for (int i = 0; i < n; i++) {
             System.out.println("\n--- Nhập xe thứ " + (i + 1) + " ---");
             System.out.print("Tên chủ xe: ");
@@ -52,7 +51,6 @@ public class VehicleMain {
             ds[i] = new Vehicle(name, type, value, capacity);
         }
 
-        // In bảng kê khai thuế
         System.out.println("\n=================== BẢNG KÊ KHAI TIỀN THUẾ TRƯỚC BẠ ===================");
         System.out.println(String.format("%15s %20s %20s %15s %15s",
                 "Tên chủ xe", "Loại xe", "Dung tích", "Trị giá", "Thuế phải nộp"));
