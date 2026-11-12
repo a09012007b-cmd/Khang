@@ -1,9 +1,7 @@
 import java.time.LocalDate;
 
-// Lớp thử nghiệm: menu lựa chọn các chức năng
 public class ChuongTrinh {
 
-    // Nhập mã hàng, yêu cầu nhập lại nếu trùng với hàng đã có
     private static String nhapMaMoi(QuanLyHangHoa ql) {
         while (true) {
             String ma = NhapLieu.docChuoiKhongRong("Mã hàng: ");
@@ -58,7 +56,6 @@ public class ChuongTrinh {
             System.out.println("0. Thoát");
             chon = NhapLieu.docSoNguyen("Chọn chức năng: ");
 
-            // Cả 3 nhánh đều gọi chung themHang(HangHoa): đa hình
             HangHoa hang = null;
             switch (chon) {
                 case 1:
