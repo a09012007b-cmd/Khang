@@ -6,13 +6,11 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        // 1. In danh sách môn học từ enum.
         System.out.println("========== DANH SÁCH MÔN HỌC ==========");
         for (MonHoc mh : MonHoc.values()) {
             System.out.println(mh);
         }
 
-        // 2. Tạo danh sách và thêm sinh viên.
         ListSinhVien ql = new ListSinhVien();
 
         ql.them(new SinhVienChinhQui(
@@ -48,32 +46,25 @@ public class Main {
         System.out.println("\n========== DANH SÁCH BAN ĐẦU ==========");
         inDanhSach(ql.layTatCa());
 
-        // 3. Tìm sinh viên theo mã.
         System.out.println("\n========== TÌM THEO MÃ SV02 ==========");
         System.out.println(ql.timTheoMa("SV02"));
 
-        // 4. Tìm theo tên có chứa từ khóa.
         System.out.println("\n========== TÌM TÊN CHỨA 'AN' ==========");
         inDanhSach(ql.timTheoTen("an"));
 
-        // 5. Tìm theo lớp.
         System.out.println("\n========== TÌM LỚP 21DTH01 ==========");
         inDanhSach(ql.timTheoLop("21DTH01"));
 
-        // 6. Tìm theo loại.
         System.out.println("\n========== SINH VIÊN TỪ XA ==========");
         inDanhSach(ql.timTheoLoai("Từ xa"));
 
-        // 7. Tìm theo môn học.
         System.out.println("\n========== SINH VIÊN HỌC JAVA ==========");
         inDanhSach(ql.timTheoMon(MonHoc.LAP_TRINH_JAVA));
 
-        // 8. Thống kê số lượng và tổng thành tiền.
         System.out.println("\n========== THỐNG KÊ ==========");
         System.out.println("Số lượng: " + ql.tongSoLuong());
         System.out.printf("Tổng thành tiền: %,.0f VND%n", ql.tongThanhTien());
 
-        // 9. GROUP BY theo lớp.
         System.out.println("\n========== GROUP BY LỚP ==========");
         Map<String, List<SinhVien>> nhomLop =
             ql.nhomTheo(SinhVien::getLop);
@@ -83,7 +74,6 @@ public class Main {
                 + " có " + entry.getValue().size() + " sinh viên");
         }
 
-        // 10. GROUP BY + SUM thành tiền theo loại.
         System.out.println("\n========== TỔNG TIỀN THEO LOẠI ==========");
         Map<String, Double> tongTheoLoai =
             ql.tongTienTheoNhom(SinhVien::getLoai);
@@ -93,7 +83,6 @@ public class Main {
                 entry.getKey(), entry.getValue());
         }
 
-        // 11. HAVING: chỉ lấy lớp có ít nhất 2 sinh viên.
         System.out.println("\n========== HAVING: LỚP CÓ ÍT NHẤT 2 SV ==========");
         Map<String, List<SinhVien>> having =
             ql.havingSoLuong(SinhVien::getLop, 2);
@@ -103,14 +92,12 @@ public class Main {
                 + entry.getValue().size() + " sinh viên");
         }
 
-        // 12. Sắp xếp theo tên và thành tiền giảm dần.
         System.out.println("\n========== SẮP XẾP THEO TÊN ==========");
         inDanhSach(ql.sapXepTheoTen());
 
         System.out.println("\n========== SẮP XẾP THÀNH TIỀN GIẢM DẦN ==========");
         inDanhSach(ql.sapXepTheoThanhTienGiamDan());
 
-        // Thử sửa và xóa.
         System.out.println("\n========== THỬ SỬA SV01 ==========");
         SinhVien svSua = new SinhVienChinhQui(
             "SV01", "Nguyễn An (đã sửa)", LocalDate.of(2005, 3, 12),
