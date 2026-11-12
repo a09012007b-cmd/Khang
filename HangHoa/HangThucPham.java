@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-// Hàng thực phẩm: VAT 5%
 public class HangThucPham extends HangHoa {
     private LocalDate ngaySanXuat;
     private LocalDate ngayHetHan;
@@ -42,7 +41,6 @@ public class HangThucPham extends HangHoa {
         return getDonGia() * 0.05;
     }
 
-    // Còn tồn kho và đã hết hạn thì khó bán
     @Override
     public String danhGiaMucDoBanBuon() {
         if (getSoLuongTon() > 0 && LocalDate.now().isAfter(ngayHetHan)) {
