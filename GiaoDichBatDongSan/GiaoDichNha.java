@@ -1,11 +1,7 @@
-// File: GiaoDichNha.java
 import java.time.LocalDate;
 
-// ============================================================
-// (3) LỚP GiaoDichNha kế thừa GiaoDich
-// ============================================================
 public class GiaoDichNha extends GiaoDich {
-    private String loaiNha;   // "cao cấp", "thường"
+    private String loaiNha;
     private String diaChi;
 
     public GiaoDichNha(String ma, LocalDate ngay, double donGia,
@@ -20,7 +16,6 @@ public class GiaoDichNha extends GiaoDich {
         if (loaiNha.equalsIgnoreCase("cao cấp")) {
             return dienTich * donGia;
         }
-        // Loại thường: giảm còn 90%
         return dienTich * donGia * 0.9;
     }
 
