@@ -1,4 +1,3 @@
-// Khách hàng Việt Nam kế thừa KhachHang, có thêm loại khách hàng và định mức
 public class KhachHangViet extends KhachHang {
     private int LoaiKH, DinhMuc;
 
@@ -38,7 +37,6 @@ public class KhachHangViet extends KhachHang {
         DinhMuc = in.nextInt();
     }
 
-    // Trong định mức tính giá thường, vượt định mức tính 2.5 lần
     public double TTien() {
         if (SoLuong <= DinhMuc)
             return this.ThanhTien = this.DonGia * this.SoLuong;
