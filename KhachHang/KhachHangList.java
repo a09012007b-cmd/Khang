@@ -1,4 +1,3 @@
-// Lớp quản lý danh sách khách hàng, dùng cấu trúc mảng
 public class KhachHangList {
     private KhachHang kh[] = new KhachHang[100];
     private int CountKH, sum1 = 0, sum2 = 0, dem = 0;
@@ -10,7 +9,6 @@ public class KhachHangList {
             kh[i] = new KhachHang();
     }
 
-    // temp = 1: thêm khách hàng Việt Nam, ngược lại: thêm khách hàng nước ngoài
     public void ThemKH(int temp) {
         if (CountKH >= 100)
             System.out.println("Bo Nho Da Day, ko the them!");
