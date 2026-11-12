@@ -1,9 +1,7 @@
-// Lớp quản lý danh sách hàng hóa, dùng mảng để lưu trữ
 public class QuanLyHangHoa {
     private HangHoa[] danhSach;
     private int soLuong;
 
-    // Constructor khởi tạo danh sách với sức chứa cho trước
     public QuanLyHangHoa(int sucChua) {
         if (sucChua <= 0) {
             sucChua = 100;
@@ -25,8 +23,6 @@ public class QuanLyHangHoa {
         return false;
     }
 
-    // Đa hình: tham số kiểu HangHoa nhận được cả 3 loại hàng cụ thể
-    // Thêm thành công nếu không trùng mã và danh sách chưa đầy
     public boolean themHang(HangHoa hang) {
         if (hang == null) {
             return false;
