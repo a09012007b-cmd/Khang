@@ -1,4 +1,3 @@
-// Khách hàng nước ngoài kế thừa KhachHang, có thêm thuộc tính quốc tịch
 public class KhachHangNuocNgoai extends KhachHang {
     private String QuocTich;
 
@@ -26,7 +25,6 @@ public class KhachHangNuocNgoai extends KhachHang {
         QuocTich = in.next();
     }
 
-    // Thành tiền = số lượng * đơn giá
     public double TTien() {
         return this.ThanhTien = this.SoLuong * this.DonGia;
     }
