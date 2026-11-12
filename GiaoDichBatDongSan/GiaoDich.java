@@ -1,17 +1,13 @@
-// File: GiaoDich.java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-// ============================================================
-// (1) LỚP TRỪU TƯỢNG GiaoDich
-// ============================================================
 public abstract class GiaoDich {
-    protected String maGiaoDich;       // protected → lớp con truy cập được
-    protected LocalDate ngayGiaoDich;  // LocalDate xử lý ngày tháng tiện hơn
+    protected String maGiaoDich;
+    protected LocalDate ngayGiaoDich;
     protected double donGia;
     protected double dienTich;
 
-    // Constructor nhận đủ tham số
+    // Constructor
     public GiaoDich(String maGiaoDich, LocalDate ngayGiaoDich,
                     double donGia, double dienTich) {
         this.maGiaoDich = maGiaoDich;
@@ -20,14 +16,14 @@ public abstract class GiaoDich {
         this.dienTich = dienTich;
     }
 
-    // Phương thức trừu tượng — lớp con bắt buộc override
+    // Phương thức trừu tượng
     public abstract double thanhTien();
 
-    // Getter cần thiết để truy xuất từ bên ngoài
+    // Getter
     public String getMaGiaoDich() { return maGiaoDich; }
     public LocalDate getNgayGiaoDich() { return ngayGiaoDich; }
 
-    // Ghi đè toString() để in ra dễ đọc
+    //toString
     @Override
     public String toString() {
         return String.format(
