@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Chương trình chính: menu nhập, xuất và tính trung bình thành tiền
 public class KhachHang_CTQuanLy {
     public static void main(String[] args) {
         KhachHangList lkh = new KhachHangList();
